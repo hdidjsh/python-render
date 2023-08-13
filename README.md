@@ -8,6 +8,8 @@ Guide on how to deploy your Python code with Flask using Render cloud hosting
 curl https://pyenv.run | bash
 ```
 
+## Add to ~/.bashrc for Ubuntu 22.04
+
 ```shell
 WARNING: seems you still have not added 'pyenv' to the load path.
 
@@ -28,8 +30,20 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 ```
 
+## Install specific Python version
+
+```shell
+pyenv install 3.10.12
+```
+
 ## Configure and create a (very) simple Flask app
+
+```shell
+pyenv local 3.10.12
+```
 
 ## Deploy your Flask app to Render
 
+```shell
 
+```
