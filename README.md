@@ -92,3 +92,38 @@ FLASK_DEBUG=True
 ```shell
 pip freeze > requirements.txt
 ```
+
+Go to [Create a new Web Service](https://dashboard.render.com/select-repo?type=web) and connect your GitHub repo.
+
+Make sure the Build Command is:
+
+```shell
+pip install -r requirements.txt
+```
+
+And the Start Command is:
+
+```shell
+gunicron app:app
+```
+
+Lastly click on the “Advanced” button and add three environment variables:
+
+```shell
+PYTHON_VERSION = 3.10.12
+PROD_APP_SETTINGS = config.ProductionConfig
+```
+
+The PYTHON_VERSION variable tells Render to use Python version 3.10.12 — exactly the same version we specified at the
+very beginning of our project with pyenv.
+
+The second PROD_APP_SETTINGS variable instructs Render to use the Flask production config options we set in our
+config.py file.
+
+With our web service configuration done, now all we have left to do is click “Create Web Service” and watch the project
+get deployed
+
+This will take a bit of time since we are on the free plan. At the end of the process if everything went smoothly we
+should see the output saying "Build successful" and "Starting service with gunicorn app: app".
+
+From here we can click on the link Render has provided for us and see our “Hello World!” message live on the Internet.
