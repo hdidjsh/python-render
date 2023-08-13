@@ -68,6 +68,17 @@ pip install Flask python-dotenv
 We also need to create a requirements.txt file so that Render will know what packages to install or if we want to share
 our project with other people in the future.
 
+Test Flask app on local:
+
+```shell
+$ flask run
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+```
+
 ## Deploy your Flask app to Render
 
 ```shell
