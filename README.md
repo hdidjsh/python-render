@@ -42,6 +42,29 @@ pyenv install 3.10.12
 pyenv local 3.10.12
 ```
 
+## Create the virtual environment for our packages 
+
+This can be called anything but to keep things simple I just name it .venv for all my projects. (It can’t conflict with
+anything as this environment is locally-scoped to the project):
+
+```shell
+python -m venv .venv
+```
+
+Activate the environment:
+
+```shell
+source .venv/bin/activate
+```
+
+With our local virtual environment created and activated we can now install some packages. Let’s start with Flask and
+python-dotenv, which we can install in one command:
+
+```shell
+pip install --upgrade pip
+pip install Flask python-dotenv
+```
+
 ## Deploy your Flask app to Render
 
 ```shell
