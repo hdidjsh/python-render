@@ -79,6 +79,14 @@ $ flask run
  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 ```
 
+Important: To save time having to stop and start the server every time you want to make a change to your backend code,
+we can add this one line environment variable to a .env file:
+
+```shell
+# .env
+FLASK_DEBUG=True
+```
+
 ## Deploy your Flask app to Render
 
 ```shell
