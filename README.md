@@ -65,8 +65,11 @@ pip install --upgrade pip
 pip install Flask python-dotenv
 ```
 
+We also need to create a requirements.txt file so that Render will know what packages to install or if we want to share
+our project with other people in the future.
+
 ## Deploy your Flask app to Render
 
 ```shell
-
+pip freeze > requirements.txt
 ```
