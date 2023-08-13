@@ -104,7 +104,7 @@ pip install -r requirements.txt
 And the Start Command is:
 
 ```shell
-gunicron app:app
+gunicorn app:app
 ```
 
 Lastly click on the “Advanced” button and add three environment variables:
